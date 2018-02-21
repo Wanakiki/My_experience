@@ -6,7 +6,7 @@
 如果电脑不具备编译器，而且你不想因为安装一个工具多添麻烦的话，请注意下载``mingw-setup.exe``版本。（对于windows)  
 这个版本自带了编译器，省去了很多麻烦。
 ### 解决编译器报错
-如果发现出现了这个问题导致无法编译
+如果发现出现了这个问题导致无法编译  
 ![问题](https://github.com/Wanakiki/photo/blob/master/e87a5a370db0859d4de75a3a3c775dee_r.jpg)  
 需要重设路径，比较简单的方法就是点击自动查找  
 <img src="https://github.com/Wanakiki/photo/blob/master/chazao.png" width="50%" height="50%">
