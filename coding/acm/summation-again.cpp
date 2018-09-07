@@ -3,10 +3,42 @@ using namespace std;
 int main(){
     int t, n;
     int * nums;
-    int left, right, max, temp;
+    int left, right, max, min;
     cin >> t;
     for(int ti = 1; ti <= t; ti ++){
+        cin >> n;
+        if(n == 0)
+            continue;
+        nums = new int[n + 1];
+        nums[0] = 0;
+        for(int i = 1; i <= n; i++){
+            cin >> nums[i];
+        }
+        cout << "Case " << ti << ':' << endl;
+        max = INT_MIN;
+        left = 1;
+        right = 1;
+        min = 0;
         
+
+
+        for(int i = 1; i <= n; i++){
+            nums[i] += nums[i-1];
+            if(nums[i] - nums[min] > max){
+                max = nums[i] - nums[min];
+                right = i;
+                left = min + 1;
+            }
+            if(nums[i] < nums[min]){
+                min = i;
+            }
+        }
+
+        cout << max << ' ' << left << ' ' << right << endl;
+        delete nums;
+        if(ti != t){
+            cout << endl;
+        }
     }
     // for(int q = 1; q <= t; q++){
     //     cin >> n;
